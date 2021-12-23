@@ -53,10 +53,12 @@ gdImage *QrEncode(char *str)
     return Image;
 }
 
-int (main)
- (int argsc, char **args) {
-    if (!args[1])
+int main(int argsc, char **args)
+{
+    if (!args[1]) {
+	fprintf(stderr, "%s <string>\n", args[0]);
 	return 0;
+    }
     gdImagePtr ar = QrEncode(args[1]);
     if (!ar)
 	return 1;

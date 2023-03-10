@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 3.10)
-	project(dnar)
-	add_executable(dnar main.c)
-	add_executable(test main.c)
-	target_link_libraries(dnar PUBLIC "-larchive -lqrencode -lgd -Wall")
-	target_link_libraries(test PUBLIC "-larchive -lqrencode -lgd -Wall")

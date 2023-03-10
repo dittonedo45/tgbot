@@ -11,7 +11,7 @@ class TB(telebot.TeleBot):
         telebot.TeleBot.reply_to(self, *args, **kwargs)
         pass
 
-bot = TB ("5775291296:AAHgRXv2ItFXgony-nkRIlCg6TOozRQBLKU")
+bot = TB (TOKEN) 
 
 def persons():
     class BigBlob(typing.List):

@@ -9,31 +9,40 @@ class TB(telebot.TeleBot):
     def reply_to(self, *args, **kwargs):
         print(args)
         telebot.TeleBot.reply_to(self, *args, **kwargs)
-        pass
 
 bot = TB (TOKEN) 
 
 def persons():
+
+
+
     class BigBlob(typing.List):
-        def append(s, *args, **kwargs):
-            if (len (s)>=1000):
-                s.pop ()
-                pass
-            return list.append(s, *args, **kwargs)
+        def append(self, *args, **kwargs):
+            if len(self) >= 1000:
+                self.pop()
+            return list.append(self, *args, **kwargs)
+
         pass
-    pass
+
     my_bl=BigBlob ()
+
+
     class _Tracker(typing.Set):
         def __init__(self):
             self.count=0
+
         def add(self, p):
             my_bl.append (p.chat.id)
             self.count += 1
             set.add (self, p.chat.id)
-            pass
-        def __str__(s):
-            return "<all <<%s>> <I hooked: %s>"%(" |\n".join (map(str, my_bl)),
-                    ", ".join(map(str, s)),)
+
+        def __str__(self):
+            return "<all <<%s>> <I hooked: %s>" % (
+                " |\n".join(map(str, my_bl)),
+                ", ".join(map(str, self)),
+            )
+
+
     return _Tracker()
 
 my_clients = persons()
